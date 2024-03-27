@@ -1,0 +1,65 @@
+.about {
+    margin-top: 100px;
+    padding-bottom: 100px;
+    background:  url('../img/about_1.png') top left no-repeat,
+                url('../img/about_2.png') bottom right no-repeat;
+    @include mobile {
+        background:  url('../img/about_1.png') 0 0 / cover no-repeat;
+    }
+
+    &__content-inner {
+        background-color: rgba($color: #fff, $alpha: .5);
+        padding: 40px;
+    }
+    &__content:first-child {
+        position: relative;
+        padding-top: 23px;
+        margin-bottom: 260px;
+        @include tablet {
+            margin-bottom: 100px;
+        }
+        @include mobile {
+            margin-bottom: 50px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 1px;
+            height: 316px;
+            background-color: $colorBg;
+            @include mobile {
+                display: none;
+            }
+        }
+        .about__content-inner {
+            max-width: 830px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    
+    &__content:last-child {
+        position: relative;
+        max-width: 909px;
+        &::after {
+            content: '';
+            position: absolute;
+            top: calc(30px + 50px);
+            left: -99px;
+            width: 588px;
+            height: 1px;
+            background-color: $colorBg;
+            @include mobile {
+                display: none;
+            }
+        }
+        .section__title {
+            margin-bottom: 101px;
+            @include mobile {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

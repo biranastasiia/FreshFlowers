@@ -1,0 +1,18 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 61px;
+    padding-bottom: 61px;
+    z-index: 10;
+    .container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    @include tablet {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}

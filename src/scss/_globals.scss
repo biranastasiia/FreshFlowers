@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    color: $colorDark;
+    font-family: "Lato", sans-serif;
+    font-size: 22px;
+    line-height: 1.5;
+}
+html, body {
+    height: 100%;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: .3s all;
+}
+ul {
+    list-style: none;
+}
+h1, h2 {
+    color: $colorBg;
+    font-family: "Noto Serif", serif;
+    font-weight: 400;
+    font-size: 42px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+h2 {
+    line-height: 1;
+    font-weight: 600;
+}
+p {
+    color: $colorDark;
+    margin-bottom: 50px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

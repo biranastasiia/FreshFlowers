@@ -1,0 +1,17 @@
+// common styles
+@import "fonts";
+@import "mixins";
+@import "variables";
+@import "globals";
+@import "utils";
+
+// blocks
+@import "blocks/menu";
+
+// home
+@import "home/header";
+@import "home/banner";
+@import "home/about";
+@import "home/products";
+@import "home/order";
+@import "home/footer";

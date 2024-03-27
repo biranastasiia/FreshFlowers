@@ -1,0 +1,120 @@
+.banner {
+    padding-top: 229px;
+    padding-bottom: 145px;
+    background: url('../img/banner.png') top left no-repeat, $colorBg;
+    position: relative;
+    @include tablet {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background: url('../img/banner.png') top left / cover no-repeat, $colorBg;
+    }
+    .container {
+        position: relative;
+    }
+    .container::before,
+    .container::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 41.6%;
+        height: 1px;
+        background-color: $colorPink2;
+    }
+    .container::before {
+        top: 0;
+    }
+    .container::after {
+        bottom: 0;
+    }
+    &__content-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        @include tablet {
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: justify;
+        }
+    }
+    &__text {
+        max-width: 490px;
+        color: $colorLight;
+    }
+    &__title {
+        color: $colorWhite;
+        width: fit-content;
+        text-align: right;
+        margin-left: auto;
+        font-size: 120px;
+        margin-bottom: 110px;
+        @include desktop {
+            font-size: 110px;
+        }
+        @include tablet {
+            font-size: 90px;
+            width: 100%;
+            text-align: center;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @include mobile {
+            font-size: 60px;
+        }
+        @include mobileXS {
+            font-size: 38px;
+        }
+    }
+    &__title-coloured {
+        color: $colorPink;
+    }
+    &__title-designed {
+        width: fit-content;
+        margin-left: auto;
+        padding-right: 116px;
+        position: relative;
+        line-height: 1;
+        @include tablet {
+            width: 100%;
+            padding-right: 0;
+            text-align: center;
+        }
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 105px;
+            height: 100%;
+            background-image: url('../img/icons/portal.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            @include mobile {
+                width: 60px;
+            }
+            @include mobileXS {
+                display: none;
+            }
+        }
+        &::before {
+            left: -116px;
+            @include tablet {
+                left: 0;
+            }
+        }
+        &::after {
+            right: 0;
+        }
+    }
+    &__link {
+        color: $colorLight;
+        padding-right: 70px;
+        font-size: 24px;
+        text-transform: uppercase;
+        background: url('../img/icons/arrow-right.png') center right no-repeat;
+        &:hover {
+            color: $colorPink;
+        }
+    }
+}

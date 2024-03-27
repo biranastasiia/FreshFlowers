@@ -1,0 +1,67 @@
+.order {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    &__inner {
+        max-width: 1010px;
+        margin-left: auto;
+        margin-right: auto;
+        @include desktop {
+            max-width: 90%;
+        }
+    }
+    .section__title,
+    .section__text {
+        text-align: center;
+    }
+}
+.order__form {
+    background-color: $colorLight;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 79px 130px 53px;
+    @include desktop {
+        padding: 64px 70px 54px;
+    }
+    @include mobile {
+        padding: 42px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -5%;
+        left: -3%;
+        width: 106%;
+        height: 76%;
+        background-color: $colorPink2;
+        z-index: -1;
+    }
+    &-label {
+        text-transform: uppercase;
+        color: $colorBg;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+    &-input,
+    &-textarea  {
+        font-size: 32px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $colorDark;
+        background-color: transparent;
+        margin-bottom: 50px;
+    }
+    &-button {
+        border: none;
+        padding: 26px 62.5px;
+        font-size: 24px;
+        color: $colorWhite;
+        background-color: $colorBg;
+        margin-left: auto;
+        transition: .3s all;
+        cursor: pointer;
+        &:hover {
+            background-color: $colorPink;
+        }
+    }
+}
