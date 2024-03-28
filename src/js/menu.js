@@ -1,14 +1,14 @@
-const navMenu = document.querySelector('.menu');
-const navMenuList = document.querySelector('.menu__list');
+const menuBurger = document.querySelector('.menu__burger');
+const menuList = document.querySelector('.menu__list');
 
 window.addEventListener('resize', function (e) {
     const windowWidth = e.target.innerWidth;
     if (windowWidth > 1024) {
-        navMenuList.classList.remove('visible');
+        menuList.classList.remove('visible');
     }
 })
 
-navMenu.addEventListener('click', toggleMenu);
+menuBurger.addEventListener('click', toggleMenu);
 function toggleMenu() {
-    navMenuList.classList.toggle('visible');
+    menuList.classList.toggle('visible');
 }

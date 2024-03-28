@@ -63,6 +63,12 @@ gulp.task('copyFonts', function () {
         .pipe(gulp.dest('./dist/fonts/'))
 })
 
+gulp.task('copyMocks', function () {
+    return gulp
+        .src('./src/mocks/*.json')
+        .pipe(gulp.dest('./dist/mocks/'))
+})
+
 gulp.task('webserver', function () {
     return gulp
         .src('./dist/')
@@ -90,6 +96,6 @@ gulp.task('watch', function () {
 
 gulp.task('default', gulp.series(
     'cleanDist',
-    gulp.parallel('includeHTMLFiles', 'compileSCSS', 'copyImages', 'copyFonts', 'compileJS'),
+    gulp.parallel('includeHTMLFiles', 'compileSCSS', 'copyImages', 'copyFonts', 'copyMocks', 'compileJS'),
     gulp.parallel('webserver', 'watch')
 ))

@@ -3,14 +3,19 @@
         <div class="order__inner">
             <h2 class="section__title">Make order now</h2>
             <p class="section__text">At our flower shop, we pride ourselves on providing exceptional customer service and making your experience with us a delightful one. We are committed to creating stunning custom flower bouquets that exceed your expectations and leave a lasting impression.</p>
-            <p class="section__text">Thank you for choosing our shop as your trusted source for all your floral needs.</p>
             <form action="#" method="post" class="order__form">
                 <label class="order__form-label" for="user_name">YOUR NAME</label>
-                <input class="order__form-input" type="text" name="user_name" id="user_name">
+                <input class="order__form-input" type="text" name="user_name" id="user_name" required>
                 <label class="order__form-label" for="user_tel">YOUR PHONE</label>
-                <input class="order__form-input" type="tel" name="user_tel" id="user_tel">
+                <input class="order__form-input" 
+                    type="tel" 
+                    name="user_tel" 
+                    id="user_tel"
+                    pattern="[0-9]{9}"
+                    maxlength="9"
+                    required>
                 <label class="order__form-label" for="user_comment">YOUR WISHES</label>
-                <textarea class="order__form-textarea" name="user_comment" id="user_comment" cols="20" rows="3"></textarea>
+                <textarea class="order__form-textarea" name="user_comment" id="user_comment" cols="20" rows="3" required></textarea>
                 <button class="order__form-button" type="submit">REQUEST NOW</button>
             </form>
         </div>
